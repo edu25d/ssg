@@ -1,0 +1,4 @@
+.env
+database/*.sqlite
+gemini_debug.log
+.playwright-mcp/

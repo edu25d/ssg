@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# .env 및 .env.example 파일 외부 접근 금지
+<FilesMatch "^\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
